@@ -7,6 +7,8 @@ import Auth from './components/Auth/Auth';
 import PostDetails from './components/PostDetails/PostDetails';
 import { MuiThemeProvider, createTheme } from '@material-ui/core/styles';
 
+// Version with myPosts feature
+
 const theme = createTheme({
     palette: {
         primary: {

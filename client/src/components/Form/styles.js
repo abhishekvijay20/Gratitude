@@ -1,6 +1,9 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
+  text: {
+    color: '#5b5b5b'
+  },
   title: {
     fontFamily: 'Gloria Hallelujah, curive',
     marginBottom: '4px',
@@ -31,5 +34,9 @@ export default makeStyles((theme) => ({
   },
   webSearchBtn: {
     margin: '10px 0'
+  },
+  switch: {
+    display: 'flex', 
+    alignItems: 'center' 
   }
 }));

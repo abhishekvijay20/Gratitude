@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 import { useDispatch } from "react-redux";
 import { deletePost, likePost } from "../../../actions/posts";
+import LockOutlined from "@material-ui/icons/LockOutlined";
 
 import useStyles from './styles';
     
@@ -72,7 +73,7 @@ const Post = ( {post, setCurrentId} ) => {
                     <Typography variant="body2" color="textSecondary">{post.tags.map((tag)=> `#${tag} `)}</Typography>
                 </div>
                 <Typography className={classes.title} color="textSecondary" variant="p" gutterBottom>{`${firstName} is grateful for: `}</Typography>
-                <Typography className={`${classes.title} ${classes.mainText}`} variant="h5" gutterBottom>{post.title}</Typography>
+                <Typography className={`${classes.title} ${classes.mainText}`} variant="h5" gutterBottom>{post.title}{post.public ? null : "..."}{post.public ? null : <LockOutlined/>}</Typography>
                 <CardContent>
                     <Typography className={classes.content} variant="body2" color="textSecondary" component="p">
                         {gratPoints.map((point) => <ul><li>{point}</li></ul> )}

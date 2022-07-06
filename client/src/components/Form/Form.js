@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Grid, TextField, Button, Typography, Paper } from '@material-ui/core';
+import { Grid, TextField, Button, Typography, Paper, Switch } from '@material-ui/core';
 import { useDispatch, useSelector } from 'react-redux';
 import FileBase from 'react-file-base64';
 
@@ -158,6 +158,11 @@ const Form = ( {currentId, setCurrentId} ) => {
                     value={postData.tags} 
                     onChange={ (e) => setPostData({...postData, tags: e.target.value.split(',')}) }     
                 />
+
+                <div className={classes.switch}>
+                    <Typography className={classes.text}>Make your card private? </Typography>
+                    <Switch onClick={ () => setPostData({...postData, public: false})}/>
+                </div>
 
                 <div className={classes.fileInput}>
                     <Button 

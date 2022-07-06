@@ -48,6 +48,8 @@ export default makeStyles({
   title: {
     padding: '0 30px',
     color: '#5B5B5B',
+    alignItems: 'center',
+    display: 'flex',
   },
   cardActions: {
     padding: '0 16px 8px 16px',
